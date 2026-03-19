@@ -111,3 +111,36 @@ Note:
 5. JavaScript appends li to ul.
 6. JavaScript clears input.
 7. Clicking any li removes that task.
+
+## Project 02 - Quote Fetch App (02-quote-fetch)
+
+Files:
+- 02-quote-fetch/quote.html
+- 02-quote-fetch/style.css
+- 02-quote-fetch/app.js
+
+### Goal
+
+Create a DOM project focused on API integration using Fetch GET request.
+
+### Core Concepts Used
+
+1. getElementById references:
+- loadQuotesBtnRef
+- quoteListRef
+- statusTextRef
+
+2. addEventListener('click', ...):
+- Starts the quote loading flow only when user clicks the button.
+
+3. fetch(..., { method: 'GET' }):
+- Calls the public quotes API.
+
+4. response.json():
+- Converts JSON response to JavaScript object.
+
+5. createElement('li') and appendChild(li):
+- Creates quote items and appends them to the list.
+
+6. Basic loading and error status:
+- Shows loading text while fetching and an error message if request fails.
