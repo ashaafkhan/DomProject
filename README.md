@@ -144,3 +144,40 @@ Create a DOM project focused on API integration using Fetch GET request.
 
 6. Basic loading and error status:
 - Shows loading text while fetching and an error message if request fails.
+
+## Project 03 - Dark Mode Toggle (03-dark-mode-toggle)
+
+Files:
+- 03-dark-mode-toggle/index.html
+- 03-dark-mode-toggle/style.css
+- 03-dark-mode-toggle/main.js
+
+### Goal
+
+Create a simple dark/light theme toggle using DOM class manipulation.
+
+### Core Concepts Used
+
+1. getElementById reference:
+- toggle button is selected using `document.getElementById("toggle")`.
+
+2. addEventListener('click', ...):
+- Runs toggle logic when user clicks the button.
+
+3. classList.toggle('dark'):
+- Adds/removes the `dark` class on `body` to switch theme styles.
+
+4. classList.contains('dark'):
+- Checks the current mode to update button text dynamically.
+
+5. textContent update:
+- Shows `Toggle to Dark Mode` in light mode.
+- Shows `Toggle to Light Mode` in dark mode.
+
+### Current Flow Summary
+
+1. Page loads and button is selected.
+2. Label is set based on current body class.
+3. User clicks toggle button.
+4. JavaScript toggles `dark` class on body.
+5. Button text updates to the opposite mode label.
