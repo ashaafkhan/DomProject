@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <input id="todoInput" type = "text" placeholder="Enter Your Task Here..."/>
+        <button id="createButton">Create</button>
+    </div>
+        <div>
+            <ul id="todoContainer">
+                
+            </ul>
+        </div>
+    <script>
+        const createButtonRef = document.getElementById('createButton');
+        const todoInputRef = document.getElementById('todoInput');
+        const todoContainerRef = document.getElementById('todoContainer');
+
+        createButtonRef.addEventListener('click',function(){
+            const value = todoInputRef.value;
+            console.log(value)
+            const li = document.createElement('li'); //created <li>{}</li>
+            li.innerText = value; //<li>{value}</li>
+            li.addEventListener('click',function(){
+                li.remove();
+            })
+            todoContainerRef.appendChild(li);
+            todoInputRef.value ='';
+        })
+    </script>
+</body>
+</html>
